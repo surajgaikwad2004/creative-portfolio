@@ -1,4 +1,4 @@
-# ✦ Alex Reyes — Creative Portfolio
+# ✦ Suraj Gaikwad — Creative Portfolio
 
 A hand-crafted, sketch-aesthetic portfolio website built with pure HTML, CSS, and JavaScript. No frameworks. No dependencies. Just vibes.
 
