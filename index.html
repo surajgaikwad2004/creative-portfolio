@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suraj Gaikwad — Product Designer & Full Stack Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Grain Overlay -->
+  <div class="grain-overlay"></div>
+
+  <!-- Floating Mini Nav -->
+  <nav class="mini-nav" id="miniNav">
+    <a href="#hero" class="mini-nav-dot active" data-label="Home"></a>
+    <a href="#stickers" class="mini-nav-dot" data-label="Ethos"></a>
+    <a href="#work" class="mini-nav-dot" data-label="Work"></a>
+    <a href="#showcase" class="mini-nav-dot" data-label="Showcase"></a>
+    <a href="#contact" class="mini-nav-dot" data-label="Contact"></a>
+  </nav>
+
+  <!-- LEFT BORDER DOODLES -->
+  <div class="border-left" id="borderLeft">
+    <svg class="doodle-svg" viewBox="0 0 80 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Wavy line -->
+      <path d="M40 0 C20 30,60 60,40 90 C20 120,60 150,40 180 C20 210,60 240,40 270 C20 300,60 330,40 360 C20 390,60 420,40 450 C20 480,60 510,40 540 C20 570,60 600,40 630 C20 660,60 690,40 720 C20 750,60 780,40 810 C20 840,60 870,40 900" stroke="#cc2200" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+      <!-- Bird 1 -->
+      <path d="M15 80 Q20 70,25 80 Q30 70,35 80" stroke="#cc2200" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <!-- Flower -->
+      <circle cx="40" cy="200" r="5" fill="none" stroke="#cc2200" stroke-width="1.5"/>
+      <circle cx="40" cy="190" r="4" fill="none" stroke="#cc2200" stroke-width="1.5"/>
+      <circle cx="40" cy="210" r="4" fill="none" stroke="#cc2200" stroke-width="1.5"/>
+      <circle cx="30" cy="200" r="4" fill="none" stroke="#cc2200" stroke-width="1.5"/>
+      <circle cx="50" cy="200" r="4" fill="none" stroke="#cc2200" stroke-width="1.5"/>
+      <circle cx="33" cy="193" r="4" fill="none" stroke="#cc2200" stroke-width="1.5"/>
+      <circle cx="47" cy="193" r="4" fill="none" stroke="#cc2200" stroke-width="1.5"/>
+      <circle cx="33" cy="207" r="4" fill="none" stroke="#cc2200" stroke-width="1.5"/>
+      <circle cx="47" cy="207" r="4" fill="none" stroke="#cc2200" stroke-width="1.5"/>
+      <!-- Star -->
+      <path d="M40 320 L42 326 L48 326 L43 330 L45 336 L40 332 L35 336 L37 330 L32 326 L38 326 Z" stroke="#cc2200" stroke-width="1.5" fill="none"/>
+      <!-- Arrow -->
+      <path d="M25 420 Q40 430,55 420" stroke="#cc2200" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M50 415 L55 420 L50 425" stroke="#cc2200" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Bird 2 -->
+      <path d="M10 500 Q17 490,24 500 Q31 490,38 500" stroke="#cc2200" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <!-- Spiral -->
+      <path d="M40 600 C40 590,50 590,50 600 C50 612,28 612,28 600 C28 585,55 585,55 600 C55 618,22 618,22 600" stroke="#cc2200" stroke-width="1.5" fill="none"/>
+      <!-- Tape piece -->
+      <rect x="25" y="700" width="30" height="12" rx="2" fill="#cc2200" opacity="0.2" stroke="#cc2200" stroke-width="1"/>
+      <!-- Heart -->
+      <path d="M35 800 C35 795,30 790,30 795 C30 800,35 805,40 810 C45 805,50 800,50 795 C50 790,45 795,45 800 C43 797,40 800,40 803 Z" stroke="#cc2200" stroke-width="1.5" fill="none"/>
+    </svg>
+  </div>
+
+  <!-- RIGHT BORDER DOODLES -->
+  <div class="border-right" id="borderRight">
+    <svg class="doodle-svg" viewBox="0 0 80 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M40 0 C60 30,20 60,40 90 C60 120,20 150,40 180 C60 210,20 240,40 270 C60 300,20 330,40 360 C60 390,20 420,40 450 C60 480,20 510,40 540 C60 570,20 600,40 630 C60 660,20 690,40 720 C60 750,20 780,40 810 C60 840,20 870,40 900" stroke="#cc2200" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+      <!-- Leaf -->
+      <path d="M40 80 C50 65,65 70,60 85 C55 100,40 95,40 80 Z" stroke="#cc2200" stroke-width="1.5" fill="none"/>
+      <path d="M40 80 L55 82" stroke="#cc2200" stroke-width="1" stroke-linecap="round"/>
+      <!-- Lightning -->
+      <path d="M45 170 L37 190 L43 190 L35 210" stroke="#cc2200" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Circle + dot -->
+      <circle cx="40" cy="310" r="10" stroke="#cc2200" stroke-width="1.5" fill="none"/>
+      <circle cx="40" cy="310" r="3" fill="#cc2200" opacity="0.6"/>
+      <!-- Bird 3 -->
+      <path d="M20 420 Q28 410,36 420 Q44 410,52 420" stroke="#cc2200" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <!-- Diamond -->
+      <path d="M40 510 L50 520 L40 530 L30 520 Z" stroke="#cc2200" stroke-width="1.5" fill="none"/>
+      <!-- Zigzag -->
+      <path d="M20 610 L30 600 L40 610 L50 600 L60 610" stroke="#cc2200" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Tape -->
+      <rect x="25" y="700" width="30" height="12" rx="2" fill="#cc2200" opacity="0.2" stroke="#cc2200" stroke-width="1"/>
+      <!-- Smiley -->
+      <circle cx="40" cy="800" r="12" stroke="#cc2200" stroke-width="1.5" fill="none"/>
+      <circle cx="36" cy="797" r="1.5" fill="#cc2200"/>
+      <circle cx="44" cy="797" r="1.5" fill="#cc2200"/>
+      <path d="M36 804 Q40 808,44 804" stroke="#cc2200" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+      <div class="notebook-card fade-in">
+        <div class="notebook-grid"></div>
+        <div class="notebook-inner">
+          <div class="hero-text">
+            <div class="tape-strip tape-top-left"></div>
+            <p class="hero-eyebrow">✦ available for work</p>
+            <h1 class="hero-name">Suraj Gaikwad</h1>
+            <div class="hero-role-wrap">
+              <span class="hero-role">Product Designer</span>
+              <span class="hero-role-sep">/</span>
+              <span class="hero-role">Full Stack Developer</span>
+            </div>
+            <p class="hero-tagline">"Software should feel thoughtful"</p>
+            <div class="hero-meta">
+              <span class="hero-meta-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                pune, maharashtra, india
+              </span>
+              <span class="hero-meta-dot">·</span>
+              <!-- <span class="hero-meta-item" id="localTime">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                —
+              </span> -->
+            </div>
+            <div class="hero-cta-row">
+              <a href="#work" class="btn-primary">View Work ↓</a>
+              <a href="#contact" class="btn-ghost">Say Hello →</a>
+            </div>
+          </div>
+          <div class="hero-illustration">
+            <!-- Hand-drawn desk SVG -->
+            <svg class="desk-svg" viewBox="0 0 320 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Monitor -->
+              <rect x="80" y="40" width="160" height="110" rx="8" stroke="#333" stroke-width="2.5" fill="#f5f0e8"/>
+              <rect x="88" y="48" width="144" height="94" rx="4" fill="#1a1a2e" stroke="#333" stroke-width="1.5"/>
+              <!-- Screen content -->
+              <rect x="96" y="58" width="60" height="6" rx="3" fill="#cc2200" opacity="0.8"/>
+              <rect x="96" y="70" width="100" height="4" rx="2" fill="#555" opacity="0.7"/>
+              <rect x="96" y="78" width="80" height="4" rx="2" fill="#555" opacity="0.5"/>
+              <rect x="96" y="86" width="110" height="4" rx="2" fill="#555" opacity="0.4"/>
+              <rect x="96" y="102" width="45" height="28" rx="4" fill="#cc2200" opacity="0.3"/>
+              <path d="M104 116 L109 111 L114 116 L119 107 L124 112 L129 116" stroke="#cc2200" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="148" y="102" width="40" height="28" rx="4" fill="#2a2a4a" opacity="0.5"/>
+              <!-- Monitor stand -->
+              <rect x="148" y="150" width="24" height="14" rx="2" fill="#bbb" stroke="#333" stroke-width="1.5"/>
+              <rect x="132" y="162" width="56" height="6" rx="3" fill="#bbb" stroke="#333" stroke-width="1.5"/>
+              <!-- Desk surface -->
+              <path d="M20 188 Q160 182,300 188" stroke="#8B7355" stroke-width="3" stroke-linecap="round"/>
+              <rect x="18" y="188" width="284" height="10" rx="4" fill="#c8a97e" stroke="#8B7355" stroke-width="1.5"/>
+              <!-- Keyboard -->
+              <rect x="90" y="175" width="140" height="16" rx="4" fill="#ddd" stroke="#333" stroke-width="1.5"/>
+              <rect x="96" y="179" width="8" height="5" rx="1" fill="#aaa"/>
+              <rect x="108" y="179" width="8" height="5" rx="1" fill="#aaa"/>
+              <rect x="120" y="179" width="8" height="5" rx="1" fill="#aaa"/>
+              <rect x="132" y="179" width="8" height="5" rx="1" fill="#aaa"/>
+              <rect x="144" y="179" width="8" height="5" rx="1" fill="#aaa"/>
+              <rect x="156" y="179" width="8" height="5" rx="1" fill="#aaa"/>
+              <rect x="168" y="179" width="8" height="5" rx="1" fill="#aaa"/>
+              <rect x="180" y="179" width="8" height="5" rx="1" fill="#aaa"/>
+              <rect x="192" y="179" width="8" height="5" rx="1" fill="#aaa"/>
+              <rect x="114" y="187" width="40" height="3" rx="1" fill="#aaa"/>
+              <!-- Mouse -->
+              <ellipse cx="255" cy="185" rx="15" ry="10" fill="#ddd" stroke="#333" stroke-width="1.5"/>
+              <path d="M255 176 L255 183" stroke="#333" stroke-width="1"/>
+              <!-- Coffee cup -->
+              <rect x="40" y="168" width="28" height="24" rx="4" fill="#e8d5b7" stroke="#8B7355" stroke-width="1.5"/>
+              <path d="M68 176 Q76 176,76 183 Q76 190,68 190" stroke="#8B7355" stroke-width="1.5" fill="none"/>
+              <ellipse cx="54" cy="168" rx="14" ry="4" fill="#c8a97e" stroke="#8B7355" stroke-width="1"/>
+              <!-- Steam -->
+              <path d="M48 162 Q50 156,48 150" stroke="#aaa" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+              <path d="M54 160 Q56 153,54 146" stroke="#aaa" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+              <path d="M60 162 Q62 156,60 150" stroke="#aaa" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+              <!-- Plant pot -->
+              <rect x="255" y="168" width="34" height="22" rx="2" fill="#c8783a" stroke="#8B7355" stroke-width="1.5"/>
+              <rect x="252" y="164" width="40" height="8" rx="2" fill="#b86c30" stroke="#8B7355" stroke-width="1.5"/>
+              <!-- Plant leaves -->
+              <path d="M272 164 C268 148,255 142,258 132 C262 128,272 140,272 155" fill="#4a7c59" stroke="#2d5a3d" stroke-width="1"/>
+              <path d="M272 164 C276 148,289 142,286 132 C282 128,272 140,272 155" fill="#5a8c69" stroke="#2d5a3d" stroke-width="1"/>
+              <path d="M272 164 C265 155,252 158,248 150 C248 144,263 148,272 158" fill="#4a7c59" stroke="#2d5a3d" stroke-width="1"/>
+              <!-- Desk legs -->
+              <rect x="28" y="198" width="10" height="55" rx="3" fill="#c8a97e" stroke="#8B7355" stroke-width="1.5"/>
+              <rect x="282" y="198" width="10" height="55" rx="3" fill="#c8a97e" stroke="#8B7355" stroke-width="1.5"/>
+              <!-- Notepad on desk -->
+              <rect x="70" y="196" width="50" height="38" rx="3" fill="#fffbe8" stroke="#8B7355" stroke-width="1.5" transform="rotate(-5 70 196)"/>
+              <line x1="76" y1="210" x2="112" y2="207" stroke="#ddd" stroke-width="1"/>
+              <line x1="75" y1="217" x2="111" y2="214" stroke="#ddd" stroke-width="1"/>
+              <line x1="75" y1="224" x2="111" y2="221" stroke="#ddd" stroke-width="1"/>
+              <path d="M77 205 L88 202" stroke="#cc2200" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STICKER SECTION -->
+    <section class="stickers" id="stickers">
+      <div class="sticker-wrap">
+        <div class="sticker fade-in" style="--r: -4deg; --delay: 0s;">
+          <div class="sticker-tape"></div>
+          <p class="sticker-icon">✦</p>
+          <p class="sticker-text">Relentlessly pursue clarity</p>
+        </div>
+        <div class="sticker fade-in" style="--r: 3deg; --delay: 0.15s;">
+          <div class="sticker-tape"></div>
+          <p class="sticker-icon">◈</p>
+          <p class="sticker-text">Software should empower</p>
+        </div>
+        <div class="sticker fade-in" style="--r: -2deg; --delay: 0.3s;">
+          <div class="sticker-tape"></div>
+          <p class="sticker-icon">❋</p>
+          <p class="sticker-text">Design for moments</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK SECTION -->
+    <section class="work" id="work">
+      <div class="section-header fade-in">
+        <span class="section-label">— selected work</span>
+        <h2 class="section-title">Projects I've loved building</h2>
+      </div>
+      <div class="work-grid">
+
+        <div class="work-card fade-in" style="--r: -2deg; --delay: 0s;">
+          <div class="work-card-img" style="background: linear-gradient(135deg, #1a1a2e, #cc2200);">
+            <div class="work-card-img-inner">
+              <svg viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%">
+                <rect x="20" y="20" width="160" height="80" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                <circle cx="60" cy="60" r="25" fill="rgba(204,34,0,0.4)" stroke="rgba(204,34,0,0.8)" stroke-width="1.5"/>
+                <circle cx="100" cy="60" r="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+                <path d="M40 95 L80 95 L100 70 L120 95 L160 95" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="work-card-body">
+            <span class="work-tag">UX / Research</span>
+            <h3 class="work-title">Clarity Dashboard</h3>
+            <p class="work-desc">A data visualization platform redesigned to reduce cognitive load by 40%.</p>
+            <span class="work-link">View case study →</span>
+          </div>
+        </div>
+
+        <div class="work-card fade-in tall" style="--r: 2.5deg; --delay: 0.1s;">
+          <div class="work-card-img" style="background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);">
+            <div class="work-card-img-inner">
+              <svg viewBox="0 0 200 180" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%">
+                <rect x="30" y="20" width="140" height="140" rx="70" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+                <rect x="60" y="50" width="80" height="80" rx="40" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+                <circle cx="100" cy="90" r="20" fill="rgba(204,34,0,0.6)" stroke="#cc2200" stroke-width="1.5"/>
+                <path d="M40 90 L160 90" stroke="rgba(255,255,255,0.3)" stroke-width="1" stroke-dasharray="4 3"/>
+                <path d="M100 30 L100 150" stroke="rgba(255,255,255,0.3)" stroke-width="1" stroke-dasharray="4 3"/>
+              </svg>
+            </div>
+          </div>
+          <div class="work-card-body">
+            <span class="work-tag">Product / Mobile</span>
+            <h3 class="work-title">Orbit App</h3>
+            <p class="work-desc">Habit tracking reinvented around behavioral psychology principles. 50k downloads in first month.</p>
+            <span class="work-link">View case study →</span>
+          </div>
+        </div>
+
+        <div class="work-card fade-in" style="--r: -1.5deg; --delay: 0.2s;">
+          <div class="work-card-img" style="background: linear-gradient(135deg, #2d1b69, #11998e);">
+            <div class="work-card-img-inner">
+              <svg viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%">
+                <rect x="15" y="25" width="80" height="50" rx="6" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                <rect x="105" y="25" width="80" height="50" rx="6" fill="rgba(204,34,0,0.2)" stroke="rgba(204,34,0,0.6)" stroke-width="1"/>
+                <rect x="15" y="85" width="170" height="15" rx="4" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                <path d="M25 45 L45 45 L55 35 L65 55 L75 45 L85 45" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="work-card-body">
+            <span class="work-tag">Dev / Full-stack</span>
+            <h3 class="work-title">Nexus CMS</h3>
+            <p class="work-desc">Headless CMS built with real-time collab and a schema-first approach.</p>
+            <span class="work-link">View case study →</span>
+          </div>
+        </div>
+
+        <div class="work-card fade-in" style="--r: 1deg; --delay: 0.3s;">
+          <div class="work-card-img" style="background: linear-gradient(135deg, #373b44, #4286f4);">
+            <div class="work-card-img-inner">
+              <svg viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%">
+                <rect x="20" y="15" width="160" height="90" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+                <rect x="30" y="25" width="65" height="35" rx="5" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                <rect x="105" y="25" width="65" height="35" rx="5" fill="rgba(204,34,0,0.3)" stroke="rgba(204,34,0,0.5)" stroke-width="1"/>
+                <rect x="30" y="70" width="140" height="10" rx="3" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+                <circle cx="100" cy="43" r="10" fill="rgba(66,134,244,0.6)" stroke="rgba(66,134,244,0.9)" stroke-width="1"/>
+              </svg>
+            </div>
+          </div>
+          <div class="work-card-body">
+            <span class="work-tag">Design System</span>
+            <h3 class="work-title">Forma UI Kit</h3>
+            <p class="work-desc">A systematic component library used by 8 product teams. 200+ components.</p>
+            <span class="work-link">View case study →</span>
+          </div>
+        </div>
+
+        <div class="work-card fade-in tall" style="--r: -3deg; --delay: 0.4s;">
+          <div class="work-card-img" style="background: linear-gradient(135deg, #1a0533, #cc2200, #ff6b35);">
+            <div class="work-card-img-inner">
+              <svg viewBox="0 0 200 180" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%">
+                <path d="M100 20 L115 55 L155 55 L122 78 L135 115 L100 92 L65 115 L78 78 L45 55 L85 55 Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+                <circle cx="100" cy="90" r="30" fill="rgba(204,34,0,0.4)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+                <circle cx="100" cy="90" r="15" fill="rgba(255,107,53,0.5)" stroke="rgba(255,255,255,0.6)" stroke-width="1"/>
+                <circle cx="100" cy="90" r="5" fill="rgba(255,255,255,0.9)"/>
+                <path d="M40 150 Q100 130,160 150" stroke="rgba(255,255,255,0.3)" stroke-width="1" fill="none"/>
+              </svg>
+            </div>
+          </div>
+          <div class="work-card-body">
+            <span class="work-tag">Branding / Identity</span>
+            <h3 class="work-title">Ember Studio</h3>
+            <p class="work-desc">Complete brand identity for a creative agency. Logo, typography, color system, motion guidelines.</p>
+            <span class="work-link">View case study →</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SHOWCASE COLLAGE -->
+    <section class="showcase" id="showcase">
+      <div class="section-header fade-in">
+        <span class="section-label">— featured</span>
+        <h2 class="section-title">A few favorites</h2>
+      </div>
+      <div class="collage-wrap">
+        <div class="collage-card c1 fade-in">
+          <div class="collage-inner" style="background: linear-gradient(135deg,#1a1a2e,#cc2200);">
+            <p class="collage-label">Clarity Dashboard</p>
+          </div>
+        </div>
+        <div class="collage-card c2 fade-in">
+          <div class="collage-inner" style="background: linear-gradient(135deg,#0f2027,#2c5364);">
+            <p class="collage-label">Orbit App</p>
+          </div>
+        </div>
+        <div class="collage-card c3 fade-in">
+          <div class="collage-inner" style="background: linear-gradient(135deg,#2d1b69,#11998e);">
+            <p class="collage-label">Nexus CMS</p>
+          </div>
+        </div>
+        <div class="collage-card c4 fade-in">
+          <div class="collage-inner" style="background: linear-gradient(135deg,#373b44,#4286f4);">
+            <p class="collage-label">Forma UI Kit</p>
+          </div>
+        </div>
+        <div class="collage-card c5 fade-in">
+          <div class="collage-inner" style="background: linear-gradient(135deg,#1a0533,#ff6b35);">
+            <p class="collage-label">Ember Studio</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+      <div class="contact-card fade-in">
+        <div class="notebook-grid"></div>
+        <div class="contact-inner">
+          <div class="contact-left">
+            <span class="section-label">— let's connect</span>
+            <h2 class="contact-title">Got something interesting?</h2>
+            <p class="contact-sub">I'm currently available for freelance projects and full-time roles. Let's build something together.</p>
+
+            <ul class="checklist">
+              <li class="checklist-item">
+                <span class="check-box">✓</span>
+                <a href="https://linkedin.com" target="_blank" class="check-link">LinkedIn — /Surajgaikwad</a>
+              </li>
+              <li class="checklist-item">
+                <span class="check-box">✓</span>
+                <a href="mailto:Surajgaikwad1305@gmail.com" class="check-link">Email — Surajgaikwad1305@gmail.com</a>
+              </li>
+              <li class="checklist-item">
+                <span class="check-box">✓</span>
+                <a href="#" class="check-link">Portfolio — SurajGaikwad.in</a>
+              </li>
+              <li class="checklist-item">
+                <span class="check-box">✓</span>
+                <a href="https://github.com/surajgaikwad2004" target="_blank" class="check-link">GitHub — /Surajgaikwad</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact-right">
+            <div class="form-group">
+              <label class="form-label">Your name</label>
+              <input type="text" class="form-input" placeholder="Jane Smith" required/>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Your email</label>
+              <input type="email" class="form-input" placeholder="jane@company.com" required/>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message</label>
+              <textarea class="form-input form-textarea" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button class="btn-send">Send it →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer-name">SurajGaikwad</p>
+    <p class="footer-sub">Designed & built with ♥ · 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
